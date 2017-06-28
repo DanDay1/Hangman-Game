@@ -1,18 +1,32 @@
 //<script type="text/javascript">
 
-var options = ["Durham", "Lee", "Madbury"];
+var options = ["DURHAM", "LEE", "MADBURY"];
+
+var Durham = ["D", "U", "R", "H", "A", "M"];
+
+console.log(Durham);
+-
 
 var word = options[Math.floor(Math.random() * options.length)];
 
-var guessed = [];
+var guessed = []; //incorrect guesses
+//var correctGuess // correct guesses
+
+var guess;
 
 document.onkeyup = function(event) {
+		//var guess = String.fromCharCode(Event.keyCode).
+		//toUpperCase();
+
+		
 
     console.log(word);
 
-		var guess;	
+			
 
 		guess = event.key;
+
+		guess = guess.toUpperCase();
 
     	console.log(event.key);
 
@@ -24,12 +38,19 @@ document.onkeyup = function(event) {
 
 		document.write(guessed); // or guess
 
+for (var i = 0; i < word.length; i++) {
 
-	for (var i = 1; i < 10; i++) { //if this for the remaining guesses?
+        console.log("the next letter of the word is: " + word[i]);
+
+// at this point, you need to check if the letter guessed is in the chosen word.
+
+    }
+
+	//for (var i = 1; i < 10; i++) { //if this for the remaining guesses?
 
     	
 
-		}
+		
 	}
 	
 	
