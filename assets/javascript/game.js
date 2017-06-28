@@ -10,14 +10,9 @@ document.onkeyup = function(event) {
 
     console.log(word);
 
-	
+		var guess;	
 
-	var guess;	
-
-
-	for (var i = 1; i < 10; i++) { //if this for the remaining guesses?
-
-    	guess = event.key;
+		guess = event.key;
 
     	console.log(event.key);
 
@@ -29,7 +24,12 @@ document.onkeyup = function(event) {
 
 		document.write(guessed); // or guess
 
-	}
+
+	for (var i = 1; i < 10; i++) { //if this for the remaining guesses?
+
+    	
+
+		}
 	}
 	
 	
