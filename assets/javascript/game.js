@@ -2,89 +2,86 @@
 
 var options = ["DURHAM", "LEE", "MADBURY"];
 
-var dashString = ["_", "_", "_", "_", "_", "_"];
+//var dashString = ["_", "_", "_", "_", "_", "_"];
 
-var word = options[Math.floor(Math.random() * options.length)];
+var wins = 0;
+var losses = 0;
+var guessesLeft = 9;
 
-var guessed = []; 
+var dashString = [];
 
-var wrongGuess = [];
+var dash = "_";
+
+var guessed = [];
 
 var guess;
 
-document.onkeyup = function(event) {
-		//var guess = String.fromCharCode(Event.keyCode).
-		//toUpperCase();
+var word = options[Math.floor(Math.random() * options.length)];
 
-		
+for (var i = 0; i < word.length; i++) {
+    dashString.push(dash);
+}
+
+document.onkeyup = function(event) {
+    //var guess = String.fromCharCode(Event.keyCode).
+    //toUpperCase();
 
     console.log(word);
 
-			
+  	guess = event.key;
 
-		guess = event.key;
+    guess = guess.toUpperCase();
 
-		guess = guess.toUpperCase();
+    console.log(event.key);
 
-    	console.log(event.key);
+    guessed.push(guess);
 
-		guessed.push(guess);
+    console.log(guessed);
 
-		console.log(guessed);
+    console.log(guess);
+    var x;
 
-		console.log(guess);
-var x;
+    for (x = 0; x < word.length; x++) {
+        if (guess === word[x]) {
+            dashString[x] = guess;
+        }
 
-for(x = 0; x < word.length; x++) {
-	if (guess === word[x]) {
-	dashString[x] = guess;
-}
-	//if (x = word.length && guess != word[x]) {
-	//wrongGuess.push(guess);
-//}
 
-		if (dashString === word){
-		win++;
-		}
-	
-}
+        if (dashString === word) {
+            win++;
+        } 
 
-		document.write(guessed); 
+    }
 
-		document.write("    ");
+    document.write(guessed);
 
-		document.write(dashString);
+    document.write("    ");
 
-		document.write(wrongGuess);
+    document.write(dashString);
+
+    //document.write(wrongGuess);
 
 
 
-for (var i = 0; i < word.length; i++) {
+    for (var i = 0; i < word.length; i++) {
 
         console.log("the next letter of the word is: " + word[i]);
 
 
 
-// at this point, you need to check if the letter guessed is in the chosen word.
+        // at this point, you need to check if the letter guessed is in the chosen word.
 
 
 
     }
 
-	//for (var i = 1; i < 10; i++) { //if this for the remaining guesses?
-
-    	
-
-		
-	}
-	
-	
+    //for (var i = 1; i < 10; i++) { //if this for the remaining guesses?
 
 
 
-//Why doesn't the document write appear in the loop until it ends?
 
-//How to make the correct guess latters in order.
+}
+
 
 //for (var j = 0; j < favTVshows.length; j++) {
 
