@@ -1,8 +1,4 @@
-//<script type="text/javascript">
-
 var options = ["DURHAM", "LEE", "MADBURY"];
-
-//var dashString = ["_", "_", "_", "_", "_", "_"];
 
 var wins = 0;
 var losses = 0;
@@ -23,18 +19,23 @@ for (var i = 0; i < word.length; i++) {
 }
 
 document.onkeyup = function(event) {
-    //var guess = String.fromCharCode(Event.keyCode).
-    //toUpperCase();
+	 guessesLeft--;
+
+	
+  
 
     console.log(word);
 
-  	guess = event.key;
+    guess = event.key;
 
     guess = guess.toUpperCase();
+	guessed.push(guess);
+     var divGuessesSoFar = document.getElementById("guessesSoFarDiv").innerHTML = guessed;
+    
 
     console.log(event.key);
 
-    guessed.push(guess);
+    
 
     console.log(guessed);
 
@@ -42,6 +43,7 @@ document.onkeyup = function(event) {
     var x;
 
     for (x = 0; x < word.length; x++) {
+       
         if (guess === word[x]) {
             dashString[x] = guess;
         }
@@ -49,17 +51,11 @@ document.onkeyup = function(event) {
 
         if (dashString === word) {
             win++;
-        } 
+        }
 
     }
 
-    document.write(guessed);
-
-    document.write("    ");
-
-    document.write(dashString);
-
-    //document.write(wrongGuess);
+    document.getElementById("dash").innerHTML = dashString;
 
 
 
@@ -67,47 +63,16 @@ document.onkeyup = function(event) {
 
         console.log("the next letter of the word is: " + word[i]);
 
-
-
-        // at this point, you need to check if the letter guessed is in the chosen word.
-
-        // var html = "<h1>Hit any key to begin!</h1>" +
-        // "<p>wins: " + wins + "</p>" +
-        // "<p><losses: " + losses + "</p>" +
-        // //"<p>Guesses Left: " + guessed + "</p>";
-
-        // document.querySelector('#game').innerHTML = html
-
-
-
-
     }
 
-    //for (var i = 1; i < 10; i++) { //if this for the remaining guesses?
+    var html = "<h2>Hit any key to begin!</h2>" +
+        "<p>wins: " + wins + "</p>" +
+        "<p>losses: " + losses + "</p>" +
+        "<p>Guesses Left: " + guessesLeft + "</p>";
 
+        
+        document.getElementById("game").innerHTML=html;
 
 
 
 }
-
-
-//for (var j = 0; j < favTVshows.length; j++) {
-
-
-
-// 	if (word = "Durham") {
-// 		document.write("_ _ _ _ _ _");
-// 	}
-
-//     //if (word = "Lee") {
-//     //	document.write("_ _ _");
-//     //}
-
-//     else {document.write ("_ _ _ _ _ _ _");
-
-// }
-
-
-
-
-// </script>

@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  clear: both;
+}
+
+  h1 {
+  padding: 20px;
+  color: blue;
+  font-size: 58px;
+  font-family: helvetica, arial, times, "times new roman";
+  line-height: 49px;
+  text-align: center;
+  /*border-bottom: 3px solid #ddd;*/
+}
+
+ h2 {
+  padding: 20px;
+  font-size: 24;
+  line-height: 25px;
+  font-family: helvetica, arial, times, "times new roman";
+  text-align: center;
+ }
+
+ h3 {
+  padding: 20px;
+  font-size: 35px;
+  color: orange;
+  font-family: helvetica, arial, times, "times new roman";
+  text-align: center;
+
+  #game {
+  	align-content: center;
+
+  }
+
+
+ }
