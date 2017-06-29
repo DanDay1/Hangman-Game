@@ -2,15 +2,13 @@
 
 var options = ["DURHAM", "LEE", "MADBURY"];
 
-var Durham = ["D", "U", "R", "H", "A", "M"];
-
-console.log(Durham);
--
+var dashString = ["_", "_", "_", "_", "_", "_"];
 
 var word = options[Math.floor(Math.random() * options.length)];
 
-var guessed = []; //incorrect guesses
-//var correctGuess // correct guesses
+var guessed = []; 
+
+var wrongGuess = [];
 
 var guess;
 
@@ -30,13 +28,33 @@ document.onkeyup = function(event) {
 
     	console.log(event.key);
 
-    	guessed.push(guess);
+		guessed.push(guess);
 
 		console.log(guessed);
 
 		console.log(guess);
+var x;
 
-		document.write(guessed); // or guess
+for(x = 0; x < word.length; x++) {
+	if (guess === word[x]) {
+	dashString[x] = guess;
+}
+	//if (x = word.length && guess != word[x]) {
+	//wrongGuess.push(guess);
+//}
+
+	
+}
+
+		document.write(guessed); 
+
+		document.write("    ");
+
+		document.write(dashString);
+
+		document.write(wrongGuess);
+
+
 
 for (var i = 0; i < word.length; i++) {
 
