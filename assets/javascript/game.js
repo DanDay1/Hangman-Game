@@ -43,6 +43,9 @@ for(x = 0; x < word.length; x++) {
 	//wrongGuess.push(guess);
 //}
 
+		if (dashString === word){
+		win++;
+		}
 	
 }
 
@@ -60,7 +63,11 @@ for (var i = 0; i < word.length; i++) {
 
         console.log("the next letter of the word is: " + word[i]);
 
+
+
 // at this point, you need to check if the letter guessed is in the chosen word.
+
+
 
     }
 
