@@ -71,6 +71,14 @@ document.onkeyup = function(event) {
 
         // at this point, you need to check if the letter guessed is in the chosen word.
 
+        // var html = "<h1>Hit any key to begin!</h1>" +
+        // "<p>wins: " + wins + "</p>" +
+        // "<p><losses: " + losses + "</p>" +
+        // //"<p>Guesses Left: " + guessed + "</p>";
+
+        // document.querySelector('#game').innerHTML = html
+
+
 
 
     }
